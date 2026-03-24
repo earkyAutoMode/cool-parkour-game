@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cool Parkour Game - 炫酷跑酷小游戏</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- 开始界面 -->
+        <div id="start-screen" class="overlay">
+            <h1 class="neon-text">NEON RUNNER</h1>
+            <p class="subtitle">赛博跑酷</p>
+            <div class="instructions">
+                <p>按 <strong>空格键</strong> 或 <strong>点击屏幕</strong> 跳跃</p>
+                <p>支持 <strong>二段跳</strong></p>
+            </div>
+            <button id="start-btn" class="cyber-btn">开始游戏</button>
+        </div>
+
+        <!-- 游戏界面 UI -->
+        <div id="game-ui" class="hidden">
+            <div class="score-container">
+                <span class="label">SCORE:</span>
+                <span id="current-score">0</span>
+            </div>
+        </div>
+
+        <!-- 结束界面 -->
+        <div id="end-screen" class="overlay hidden">
+            <h2 class="neon-text-red">GAME OVER</h2>
+            <div class="final-stats">
+                <p>最终得分: <span id="final-score">0</span></p>
+                <p>最高纪录: <span id="high-score">0</span></p>
+            </div>
+            <button id="restart-btn" class="cyber-btn">重新开始</button>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
